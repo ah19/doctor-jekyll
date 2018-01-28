@@ -3,7 +3,7 @@ permalink:           pretty
 # Setup
 title:               'Doctor Jekyll'
 tagline:             'Project documentation template'
-baseurl:             'https://bakery.github.io/doctor-jekyll'
+baseurl:             '/git-tutorial'
 
 sass:
   style: compressed
