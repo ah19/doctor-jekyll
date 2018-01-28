@@ -1,3 +1,14 @@
+# Usage
+
+start locally with:
+
+```
+bundle exec jekyll serve
+```
+
+view the site at:
+go to http://localhost:4000/git-tutorial/
+
 # Doctor Jekyll
 
 Doctor Jekyll is a fork of [Lanyon](https://github.com/poole/lanyon), a [Jekyll](http://jekyllrb.com) theme, built specifically for publishing documentation.
