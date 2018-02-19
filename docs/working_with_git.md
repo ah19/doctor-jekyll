@@ -3,6 +3,8 @@ title: Git
 permalink: /working-with-git.html
 ---
 # Working with git
+Git has two important use cases - developer and reviewer/merger. Developer doesn't care about 
+commits/prs. History should tell a story.
 
 ## Tips
 
