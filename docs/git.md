@@ -175,6 +175,29 @@ Out[6]: b'tag 141\x00object d8827243e3736a25f7a28f5711f399a1985362f1\ntype commi
 Git also comes with tools for viewing the contents of internal objects (e.g. git cat-file). 
 See [https://git-scm.com/book/en/v2/Git-Internals-Git-Objects](Git Internals) for full details
 
+You can also check the SHA-1 generation of a blob yourself with python:
+
+```python
+In [1]: import hashlib
+
+In [2]: def git_sha(text):
+...:      header = "blob {}\0".format(len(text))
+...:      hash = hashlib.sha1()
+...:      hash.update(header + text)
+...:      return hash.hexdigest()
+...:
+```
+
+Remember to include the newline or you will get very different keys:
+
+```
+In [3]: git_sha("hello git\n")
+Out[3]: '8d0e41234f24b6da002d962a26c2495ea16a425f'
+
+In [4]: git_sha("hello git")
+Out[4]: 'f09e9c379f5fe8f4ce718641c356df87906d87a6'
+```
+
 ### HEAD
 Not actually an object in git but it's very important to know about because you'll see HEAD come 
 up a lot in git examples. HEAD is a text file in your git folder that typically refers to another 
